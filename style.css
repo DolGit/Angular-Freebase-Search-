@@ -1,0 +1,23 @@
+
+.suggestion {
+  float: left;
+  padding: 10px;
+}
+
+img {
+  height: 150px;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.notable {
+  font-size: 16px;
+}
+
+input {
+  padding: 5px;
+  font-size: 20px;
+}
+  

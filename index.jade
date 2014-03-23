@@ -1,0 +1,21 @@
+!!! 5
+html(ng-app='plunker')
+  head
+    meta(charset='utf-8')
+    title AngularJS Plunker
+    script
+      document.write('
+      ');
+    link(rel='stylesheet', href='style.css')
+    script(data-require='angular.js@1.0.x', src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js', data-semver='1.0.8')
+    script(data-require='angular-resource@1.1.5', data-semver='1.1.5', src='http://code.angularjs.org/1.1.5/angular-resource.min.js')
+
+    script(src='app.js')
+  body
+    .tab-content.columns(meta-search="/people/person")
+      input(type="text" ng-model="q" placeholder="Search for someone")
+      .search-suggestions(ng-if="q")
+        .suggestion(ng-repeat=("obj in objectResults"))
+          .left: img(style="height: 150px" ng-src="https://usercontent.googleapis.com/freebase/v1/image{{obj.mid}}?maxwidth=500&maxheight=500&mode=fillcropmid")
+          .name {{obj.name}}
+          .notable {{obj.notable.name}}
